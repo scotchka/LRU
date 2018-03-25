@@ -13,14 +13,14 @@ class Node(object):
 
 class DLL(object):
     def __init__(self):
-        """Circular doubly linked list with a sentinal node."""
+        """Circular doubly linked list with a sentinel node."""
 
         self.terminal = Node('terminal')
         self.terminal.next = self.terminal
         self.terminal.prev = self.terminal
 
     def add(self, node, next=None):
-        """Add new node before existing node, defaulting to the sentinal."""
+        """Add new node before existing node, defaulting to the sentinel."""
 
         if next is None:
             next = self.terminal
