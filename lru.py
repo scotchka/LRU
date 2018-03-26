@@ -13,7 +13,11 @@ class Node(object):
 
 class DLL(object):
     def __init__(self):
-        """Circular doubly linked list with a sentinel node."""
+        """Circular doubly linked list with a sentinel node.
+        
+        idea from:
+        https://github.com/ActiveState/code/tree/master/recipes/Python/576693_Ordered_Dictionary_for_Py24
+        """
 
         self.terminal = Node('terminal')
         self.terminal.next = self.terminal
