@@ -7,6 +7,8 @@
 Least Recently Used (LRU) cache
 -------------------------------
 
+Implementation of LRU cache in Python.
+
 .. code:: python
 
   >>> from lru import LRU
