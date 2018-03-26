@@ -89,8 +89,15 @@ class LRU(dict):
         raise NotImplementedError
 
     def __iter__(self):
-        """Iterate through list in order."""
+        """Iterate through keys in order."""
         node = self._dll.head
         while node is not self._dll.terminal:
-            yield node
+            yield node.data
             node = node.prev
+
+    def __reversed__(self):
+        """Iterate through keys in order."""
+        node = self._dll.tail
+        while node is not self._dll.terminal:
+            yield node.data
+            node = node.next
